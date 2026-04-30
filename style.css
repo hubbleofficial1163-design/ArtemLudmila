@@ -464,12 +464,16 @@ textarea {
     width: 60%;
 }
 
+.timing-content > .timing-item:nth-child(3) {
+    transform: translateY(-20px);
+}
+
 .timing-content > .timing-item:nth-child(4) {
-    transform: translateY(-44px);
+    transform: translateY(-64px);
 }
 
 .timing-content > .timing-item:nth-child(5) {
-    transform: translateY(-92px);
+    transform: translateY(-104px);
 }
 
 .timing-left {
