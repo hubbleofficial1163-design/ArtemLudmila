@@ -116,9 +116,15 @@ if (revealItems.length) {
         revealItems.forEach((item) => {
             const rect = item.getBoundingClientRect();
             const isVisible = rect.top < viewportBottom && rect.bottom > viewportTop;
+            const isHeroItem = item.closest('.hero');
             const isDressCodeItem = item.closest('.dress-code');
             const isDetailsItem = item.closest('.details');
             const isRsvpItem = item.closest('.rsvp');
+
+            if (isHeroItem) {
+                item.classList.toggle('is-visible', isVisible);
+                return;
+            }
 
             if (isDressCodeItem || isDetailsItem || isRsvpItem) {
                 if (isVisible) {
@@ -127,7 +133,9 @@ if (revealItems.length) {
                 return;
             }
 
-            item.classList.toggle('is-visible', isVisible);
+            if (isVisible) {
+                item.classList.add('is-visible');
+            }
         });
 
         revealTicking = false;
