@@ -25,18 +25,34 @@ const timingSvg = document.querySelector('.timing-line');
 
 if (flow2 && timingPath && timingSection && lineContainer && timingSvg) {
     const pathLength = timingPath.getTotalLength();
-    
+    const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+    let stableViewportHeight = window.innerHeight;
+    let lastKnownWidth = window.innerWidth;
+    let flowTicking = false;
+
+    function refreshFlowMetrics(forceViewportUpdate = false) {
+        const currentWidth = window.innerWidth;
+        const currentHeight = window.innerHeight;
+        const widthChanged = currentWidth !== lastKnownWidth;
+        const heightDelta = Math.abs(currentHeight - stableViewportHeight);
+
+        if (forceViewportUpdate || widthChanged || !isTouchDevice || heightDelta > 160) {
+            stableViewportHeight = currentHeight;
+        }
+
+        lastKnownWidth = currentWidth;
+    }
+
     function updateFlowPosition() {
         const sectionRect = timingSection.getBoundingClientRect();
         const containerRect = lineContainer.getBoundingClientRect();
-        
         const sectionTop = sectionRect.top + window.pageYOffset;
         const sectionBottom = sectionRect.bottom + window.pageYOffset;
-        const scrollPosition = window.pageYOffset + window.innerHeight / 2;
-        
+        const scrollPosition = window.pageYOffset + stableViewportHeight / 2;
+
         let progress = (scrollPosition - sectionTop) / (sectionBottom - sectionTop);
         progress = Math.max(0, Math.min(1, progress));
-        
+
         const point = timingPath.getPointAtLength(progress * pathLength);
         const ctm = timingPath.getScreenCTM();
 
@@ -55,10 +71,36 @@ if (flow2 && timingPath && timingSection && lineContainer && timingSvg) {
         flow2.style.left = (screenPoint.x - containerRect.left - flowWidth / 2) + 'px';
         flow2.style.top = (screenPoint.y - containerRect.top - flowHeight / 2) + 'px';
     }
-    
-    window.addEventListener('scroll', updateFlowPosition);
-    window.addEventListener('resize', updateFlowPosition);
-    updateFlowPosition();
+
+    function requestFlowUpdate() {
+        if (flowTicking) {
+            return;
+        }
+
+        flowTicking = true;
+        window.requestAnimationFrame(() => {
+            updateFlowPosition();
+            flowTicking = false;
+        });
+    }
+
+    refreshFlowMetrics(true);
+
+    window.addEventListener('scroll', requestFlowUpdate, { passive: true });
+    window.addEventListener('resize', () => {
+        refreshFlowMetrics();
+        requestFlowUpdate();
+    });
+    window.addEventListener('orientationchange', () => {
+        refreshFlowMetrics(true);
+        requestFlowUpdate();
+    });
+    window.addEventListener('load', () => {
+        refreshFlowMetrics(true);
+        requestFlowUpdate();
+    });
+
+    requestFlowUpdate();
 }
 
 
