@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на свадьбу</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="site-wrapper">
+        <section class="hero">
+            <div class="hero-content">
+                <div class="photos-row">
+                    <div class="photo-left">
+                        <img src="girl.png" alt="Невеста" class="photo-girl">
+                    </div>
+                    <div class="photo-right">
+                        <img src="boy.png" alt="Жених" class="photo-boy">
+                        <img src="flow.gif" alt="Flow" class="flow-gif">
+                    </div>
+                </div>
+                
+                <div class="names-section">
+                    <div class="names-text">
+                        <span class="name">Артем +</span>
+                        <!-- <span class="plus">+</span> -->
+                        <span class="name">Людмила =</span>
+                        <!-- <span class="equals">=</span> -->
+                    </div>
+                    <img src="heart.gif" alt="Сердце" class="heart-gif">
+                </div>
+                
+                <div class="player-section">
+                    <img src="player.png" alt="Play" class="player-btn" id="playerBtn">
+                    <audio id="audio" loop>
+                        <source src="music.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                
+                <div class="ticker-wrapper">
+                    <div class="ticker">
+                        <span>Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • </span>
+                        <span>Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="invitation">
+            <div class="invitation-content">
+                <h2 class="invitation-title">Дорогие родные и близкие!</h2>
+                
+                <div class="calendar">
+                    <div class="calendar-top">
+                        <p class="calendar-text">МЫ ЖЕНИМСЯ!</p>
+                        <p class="calendar-subtext">Приглашаем Вас отпраздновать наш первый семейный праздник - нашу свадьбу</p>
+                    </div>
+                    
+                    <p class="calendar-date"></p>
+                    <p class="calendar-date">05.09.2026</p>
+                    <p class="calendar-date"></p>
+                    
+                    <div class="calendar-days">
+                        <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+                    </div>
+                    
+                    <div class="calendar-numbers">
+                        <span></span>
+                        <span>1</span><span>2</span><span>3</span><span>4</span>
+                        <span class="day-5">
+                            5
+                            <img src="cal.gif" alt="Календарь" class="cal-gif">
+                        </span>
+                        <span>6</span>
+                        <span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span>
+                        <span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
+                        <span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span>
+                        <span>28</span><span>29</span><span>30</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="location">
+            <div class="location-content">
+                <h2 class="location-title">LOCATION</h2>
+                <div class="location-bottom">
+                    <p class="location-address">Гольф-клуб Раевский<br>Гостевая ул., 9, станица Натухаевская</p>
+                    <a href="https://yandex.ru/maps/org/golf_klub_rayevskiy/1089442688?si=m85pb4r5fycvejqdg3w1w275mr" target="_blank" class="location-btn">Открыть на карте</a>
+                </div>
+            </div>
+            <div class="ticker-wrapper">
+                <div class="ticker">
+                    <span>Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • </span>
+                    <span>Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • Приглашение на свадьбу • </span>
+                </div>
+            </div>
+        </section>
+
+
+<section class="timing">
+            <div class="timing-content">
+                <h2 class="timing-title">TIMING</h2>
+                
+                <div class="timing-line-container">
+                    <svg class="timing-line" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288 920" preserveAspectRatio="none">
+                        <path id="timingPath" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.5" d="M3.801 1C3.801 1 22.7342 48.6304 80.5589 79.3427C159.169 121.0954 283.487 155.6534 286.902 220.2334C293.114 337.7274 3.0324 338.3364 1.0108 455.8934C-1.0228 574.1504 284.039 578.0344 282.081 696.2914C281.235 747.3644 187.587 774.9074 113.342 812.2264C78.1483 829.9164 48.6773 847.8424 31.8659 864.9814C1.2253 896.2194 3.801 919.0004 3.801 919.0004">
+                        </path>
+                    </svg>
+                    <img src="flow2.png" alt="Flow" class="flow2" id="flow2">
+                </div>
+                
+                <div class="timing-item timing-left">
+                    <img src="1.png" alt="Сбор гостей" class="timing-img">
+                    <p class="timing-event">Сбор гостей</p>
+                    <p class="timing-time">16:00</p>
+                </div>
+                
+                <div class="timing-item timing-right">
+                    <img src="2.png" alt="Церемония" class="timing-img">
+                    <p class="timing-event">Церемония</p>
+                    <p class="timing-time">17:00</p>
+                </div>
+                
+                <div class="timing-item timing-left">
+                    <img src="3.png" alt="Банкет" class="timing-img">
+                    <p class="timing-event">Банкет</p>
+                    <p class="timing-time">18:00</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="dress-code">
+            <div class="dress-code-content">
+                <h2 class="dress-code-title reveal-on-scroll">DRESS CODE</h2>
+                <p class="dress-code-text reveal-on-scroll">
+                    Будем рады видеть вас в образах пастельных оттенков. Пожалуйста, поддержите цветовую гамму праздника: жёлтый, бежевый и мягкий зелёный.
+                </p>
+                <p class="dress-code-label reveal-on-scroll">Примеры образов</p>
+
+                <div class="dress-code-gallery">
+                    <div class="dress-card reveal-on-scroll" style="--card-delay: 0s;">
+                        <img src="dress1.png" alt="Образ 1" class="dress-card-img">
+                    </div>
+                    <div class="dress-card reveal-on-scroll" style="--card-delay: 0.14s;">
+                        <img src="dress2.png" alt="Образ 2" class="dress-card-img">
+                    </div>
+                    <div class="dress-card reveal-on-scroll" style="--card-delay: 0.28s;">
+                        <img src="dress3.png" alt="Образ 3" class="dress-card-img">
+                    </div>
+                    <div class="dress-card reveal-on-scroll" style="--card-delay: 0.42s;">
+                        <img src="dress4.png" alt="Образ 4" class="dress-card-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="details">
+            <div class="details-content">
+                <h2 class="details-title reveal-on-scroll">DETAILS</h2>
+
+                <div class="details-card reveal-on-scroll">
+                    <p class="details-text">
+                        Будем благодарны за тёплую атмосферу праздника и просим обойтись без криков «Горько!».
+                    </p>
+                </div>
+
+                <div class="details-card reveal-on-scroll">
+                    <p class="details-text">
+                        Лучшим подарком для нас станет ваш вклад в наш будущий семейный уют в формате денежного подарка.
+                    </p>
+                </div>
+
+                <div class="details-card reveal-on-scroll">
+                    <p class="details-text">
+                        Контакты для связи: организатор Анастасия +7 918 315-55-27
+                    </p>
+                </div>
+
+                <img src="champ.gif" alt="Champagne" class="details-champ reveal-on-scroll">
+            </div>
+        </section>
+
+        <section class="rsvp">
+            <div class="rsvp-content">
+                <h2 class="rsvp-title reveal-on-scroll">АНКЕТА</h2>
+
+                <form class="rsvp-form reveal-on-scroll" id="rsvpForm" novalidate>
+                    <label class="rsvp-group">
+                        <span class="rsvp-label">Введите Ваше имя и фамилию</span>
+                        <input
+                            class="rsvp-input"
+                            type="text"
+                            name="guest_name"
+                            placeholder="Укажите имя и фамилию каждого гостя"
+                            required
+                        >
+                    </label>
+
+                    <fieldset class="rsvp-group">
+                        <legend class="rsvp-label">Сможете ли Вы присутствовать на торжестве?</legend>
+                        <label class="rsvp-option">
+                            <input type="radio" name="attendance" value="Я приду / Мы придем" required>
+                            <span>Я приду / Мы придем</span>
+                        </label>
+                        <label class="rsvp-option">
+                            <input type="radio" name="attendance" value="Очень жаль, но прийти не получится" required>
+                            <span>Очень жаль, но прийти не получится</span>
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="rsvp-group">
+                        <legend class="rsvp-label">Предпочтения по напиткам</legend>
+                        <label class="rsvp-option">
+                            <input type="checkbox" name="drinks" value="Виски">
+                            <span>Виски</span>
+                        </label>
+                        <label class="rsvp-option">
+                            <input type="checkbox" name="drinks" value="Коньяк">
+                            <span>Коньяк</span>
+                        </label>
+                        <label class="rsvp-option">
+                            <input type="checkbox" name="drinks" value="Водка">
+                            <span>Водка</span>
+                        </label>
+                        <label class="rsvp-option">
+                            <input type="checkbox" name="drinks" value="Вино">
+                            <span>Вино</span>
+                        </label>
+                        <label class="rsvp-option">
+                            <input type="checkbox" name="drinks" value="Шампанское">
+                            <span>Шампанское</span>
+                        </label>
+                        <label class="rsvp-option">
+                            <input type="checkbox" name="drinks" value="Безалкогольные напитки">
+                            <span>Безалкогольные напитки</span>
+                        </label>
+                    </fieldset>
+
+                    <label class="rsvp-group">
+                        <span class="rsvp-label">Если у вас есть аллергия, пожалуйста, укажите на что именно!</span>
+                        <input
+                            class="rsvp-input"
+                            type="text"
+                            name="allergy"
+                            placeholder="Напишите здесь при необходимости"
+                        >
+                    </label>
+
+                    <p class="rsvp-error" id="rsvpError" hidden>Пожалуйста, заполните обязательные поля.</p>
+                    <p class="rsvp-success" id="rsvpSuccess" hidden>Спасибо! Анкета заполнена.</p>
+
+                    <button class="rsvp-submit" type="submit">Отправить</button>
+                </form>
+            </div>
+        </section>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
