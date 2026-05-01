@@ -76,7 +76,8 @@ textarea {
     z-index: 1;
     transform: rotate(-10deg);
     margin-top: -60px;
-    margin-right: -55px;
+    margin-left: -18px;
+    margin-right: -38px;
 }
 
 .photo-girl {
@@ -141,6 +142,16 @@ textarea {
     font-size: 12px;
     text-align: right;
     width: 100%;
+}
+
+.hero-equals {
+    display: inline-block;
+    min-width: 0.52em;
+    margin-left: 0.08em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    transform: scaleX(1.5);
+    transform-origin: center;
 }
 
 .heart-gif {
@@ -469,11 +480,11 @@ textarea {
 }
 
 .timing-content > .timing-item:nth-child(4) {
-    transform: translateY(-64px);
+    transform: translateY(-42px);
 }
 
 .timing-content > .timing-item:nth-child(5) {
-    transform: translateY(-104px);
+    transform: translateY(-46px);
 }
 
 .timing-left {
@@ -508,6 +519,16 @@ textarea {
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
     margin-top: 0;
+}
+
+.timing-content > .timing-item.timing-item-ceremony {
+    transform: translateY(-12px);
+    text-align: center;
+}
+
+.timing-item-final {
+    transform: translateY(-40px);
+    gap: 6px;
 }
 
 .dress-code {
