@@ -190,7 +190,7 @@ function showLoadingModal() {
 }
 
 // ========== GOOGLE SHEETS ==========
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbydJchZG6QHQ96XefyBeooez5XP2FFNdQR9gDJEv5KIe6rFPi0GLqYqiRM00-oDbZ-P/exec'; // ЗАМЕНИТЕ НА ВАШ URL
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby6gqzIWhKLyeHYdjql8Kc8P2OSeHYNT_JUaefXFutsp-qMemewsh5Uj8jXoyyCvpR88w/exec'; // ЗАМЕНИТЕ НА ВАШ URL
 
 // Анимация появления элементов при скролле
 const revealItems = document.querySelectorAll('.reveal-on-scroll');
